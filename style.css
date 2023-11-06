@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('https://images.unsplash.com/photo-1516617217372-ca29bc8c4001?auto=format&fit=crop&q=60&w=700&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTc4fHxhZGQlMjBub3RlcyUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D');
+    overflow:hidden ;
+}
+.add_note{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+textarea{
+  text-align: start;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: large;
+    background-color: aliceblue;
+    color: blue;
+}
+input[type="color"]{
+    height: 30px;
+    width: 60px;
+    padding: 3px;
+}
+.add ,.reset{
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.add{
+background-color: rgb(19, 140, 100);
+}
+.reset{
+background-color: blanchedalmond;
+}
+.buttons{
+    display: flex;;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+    gap: 15px;
+}
+
+
+/* Notes CSS */
+.sticky-container {
+    max-width: 270px;
+    position: relative;
+  }
+  
+  .sticky-outer {
+    display: flex;
+    padding-top: 92.5925926%;
+    position: relative;
+  
+    width: 100%;
+  }
+  
+  .sticky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  /* Shadow behind the sticky note */
+  .sticky:before {
+    box-shadow: -2px 2px 15px 0 rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.25);
+    content: '';
+    width: 90%;
+    left: 5px;
+    height: 75%;
+    position: absolute;
+    top: 30%;
+  }
+  
+  /* The sticky note itself */
+  .sticky-content {
+    background: linear-gradient(
+      180deg,
+      rgba(187, 235, 255, 1) 0%,
+      rgba(187, 235, 255, 1) 12%,
+      rgba(170, 220, 241, 1) 75%,
+      rgba(195, 229, 244, 1) 100%
+    );
+    width: 100%;
+    height: 100%;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kalam', cursive;
+    font-size: 1.25rem;
+    text-align: center;
+    clip-path: url(#stickyClip);
+    word-wrap: wrap;
+    padding: 20px;
+  }
+
+  /* Notes */
+.notes{
+    height: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 0px 50px 0px 50px;
+    align-items: center;
+}
+.container-inner{
+    min-height: 300px;
+    min-width: 200px;
+}
+.pin{
+  position: absolute;
+  z-index: 6;
+  top: 20px;
+}
